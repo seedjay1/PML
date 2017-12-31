@@ -88,3 +88,36 @@ g <- ggplot(training, aes(x=cutWage, y=age, fill=cutWage)) +
   geom_dotplot(binaxis = 'y', stackdir = 'center', dotsize = .1)
 
 print(g)
+
+
+# wage x job class
+g1 <- ggplot(training, aes(x=jobclass, y=wage, fill=jobclass)) + 
+  theme(legend.position="none"
+        , panel.background = element_rect(fill='grey')
+        , plot.background = element_rect(fill='darkseagreen')
+        , plot.title = element_text(hjust = 0.5)
+  ) +
+  ggtitle('Wage Distribution By Job Class') +
+  labs(x="Job Class", y="Wage") +
+  geom_violin(trim=TRUE) +
+  scale_fill_brewer(palette="Blues") + 
+  geom_boxplot(width=0.05) + 
+  geom_dotplot(binaxis = 'y', stackdir = 'center', dotsize = .1)
+
+print(g1)
+
+# wage x education
+g2 <- ggplot(training, aes(x=education, y=wage, fill=education)) + 
+  theme(legend.position="none"
+        , panel.background = element_rect(fill='grey')
+        , plot.background = element_rect(fill='darkseagreen')
+        , plot.title = element_text(hjust = 0.5)
+  ) +
+  ggtitle('Wage Distribution By Education') +
+  labs(x="Education", y="Wage") +
+  geom_violin(trim=TRUE) +
+  scale_fill_brewer(palette="Blues") + 
+  geom_boxplot(width=0.05) + 
+  geom_dotplot(binaxis = 'y', stackdir = 'center', dotsize = .1)
+
+print(g2)
