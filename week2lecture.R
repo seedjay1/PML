@@ -74,4 +74,17 @@ bp1 <- qplot(cutWage, age, data=training, fill=cutWage, geom=c("boxplot"))
 print(bp1)
 
 # NOW TRY THIS WITH A VIOLIN PLOT IN ORDER TO SEE THE POINTS
+g <- ggplot(training, aes(x=cutWage, y=age, fill=cutWage)) + 
+  theme(legend.position="none"
+        , panel.background = element_rect(fill='grey')
+        , plot.background = element_rect(fill='darkseagreen')
+        , plot.title = element_text(hjust = 0.5)
+  ) +
+  ggtitle('Age Distribution By Wage Group') +
+  labs(x="Wage Group", y="Age") +
+  geom_violin(trim=TRUE) +
+  scale_fill_brewer(palette="Blues") + 
+  geom_boxplot(width=0.05) + 
+  geom_dotplot(binaxis = 'y', stackdir = 'center', dotsize = .1)
 
+print(g)
