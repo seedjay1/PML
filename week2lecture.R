@@ -121,3 +121,4 @@ g2 <- ggplot(training, aes(x=education, y=wage, fill=education)) +
   geom_dotplot(binaxis = 'y', stackdir = 'center', dotsize = .1)
 
 print(g2)
+
