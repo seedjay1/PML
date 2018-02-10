@@ -2,7 +2,9 @@
 title: "Machine Prediction Of Human Activity"
 author: "Christopher Jones"
 date: "January 6, 2018"
-output: html_document
+output: 
+  html_document:
+    code_folding: hide
 ---
 
 ```{r setup, include=FALSE}
