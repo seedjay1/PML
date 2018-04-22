@@ -44,6 +44,7 @@ data_train_train <- data_train_train[, lapply( data_train_train, function(x) sum
 # homogenize data types
 # not sure what this is about - fuck it let's do some ML
 
+# made a change, testing github connection
 
 # train decision tree model
 set.seed(42)
